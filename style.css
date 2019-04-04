@@ -1,21 +1,45 @@
 body {
   /* 画像ファイルの指定 */
   background-image: url(images/background.jpg);
-   
   /* 画像を常に天地左右の中央に配置 */
   background-position: center center;
-   
   /* 画像をタイル状に繰り返し表示 */
   background-repeat: repeat;
-   
   /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
   background-attachment: fixed;
-   
   /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
   background-size: cover;
-   
-  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  /* 背景画像が読み込まれる前に表示される背景色 */
   background-color: #464646;
+}
+
+h1 {
+  /* 文字色 */
+  color: #87CEFA;
+  /* 先頭文字の大きさ */
+  padding-bottom: .5em;
+  /* ボーダー */
+  display: inline-block;
+  border-bottom: 1px solid #C71585;
+}
+
+p {
+  /* 文字色 */
+  color: #D3D3D3;
+}
+
+/* 未訪問のリンク */
+/* 訪問済みのリンク */
+/* ポイント時のリンク */
+/* 選択中のリンク */
+a:link { color: #90EE90; }
+a:visited { color: #90EE90; }
+a:hover { color: #7B68EE; }
+a:active { color: #DC143C; }
+
+.mgr-10{
+  /* 文字間の余白 */
+  margin-right : 10px;
 }
 
 .inner{

@@ -1,48 +1,71 @@
+/* tonsky/FiraCode(https://github.com/tonsky/FiraCode) */
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+
+html {
+  /* 背景画像をブラウザ全体に表示 */
+  background-image: url(images/background.jpg); /* 背景画像 */
+  background-position: center center;           /* 背景:上下左右中央 */
+  background-repeat: repeat;                    /* 背景:タイル状に繰り返し表示 */
+  background-attachment: fixed;                 /* 背景:コンテンツの高さが大きい時、動かないように固定 */
+  background-size: cover;                       /* 背景:表示するコンテナの大きさに基づいてサイズ調整 */
+  background-color: #464646;                    /* 背景:読込み前に表示される背景色 */
+}
+
 body {
-  /* 画像ファイルの指定 */
-  background-image: url(images/background.jpg);
-  /* 画像を常に天地左右の中央に配置 */
-  background-position: center center;
-  /* 画像をタイル状に繰り返し表示 */
-  background-repeat: repeat;
-  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
-  background-attachment: fixed;
-  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-  background-size: cover;
-  /* 背景画像が読み込まれる前に表示される背景色 */
-  background-color: #464646;
+  text-align: left;                             /* 文字位置 */
+  margin:3em;                                   /* マージン(全体位置) */
+  padding:0;                                    /* パディング(marginで調整) */
+
+  font-size: 20px;                              /* フォントサイズ */
+  font-family: 'Fira Code', monospace;          /* フォント(一部@import) */
+  font-feature-settings: "calt" 1;              /* 前後関係に依存する字形機能(合字フォントとの調停) */
 }
 
 h1 {
-  /* 文字色 */
-  color: #87CEFA;
-  /* 先頭文字の大きさ */
-  padding-bottom: .5em;
-  /* ボーダー */
-  display: inline-block;
-  border-bottom: 1px solid #C71585;
+  color: #87CEFA;                               /* 文字色 */
+  display: inline-block;                        /* インライン要素化 */
+  border-bottom: 1px solid #C71585;             /* ボーダー */
+  padding-bottom: .1em;                         /* 下パディング(ボーダーとの調停) */
+  padding-top: .2em;                            /* 上パディング(h1との調停) */
 }
 
 p {
-  /* 文字色 */
-  color: #D3D3D3;
+  color: #D3D3D3;                               /* 文字色 */
 }
 
-/* 未訪問のリンク */
-/* 訪問済みのリンク */
-/* ポイント時のリンク */
-/* 選択中のリンク */
-a:link { color: #90EE90; }
-a:visited { color: #90EE90; }
-a:hover { color: #7B68EE; }
-a:active { color: #DC143C; }
-
-.mgr-10{
-  /* 文字間の余白 */
-  margin-right : 10px;
+/* 未訪問リンク */
+a:link {
+  color: #90EE90;                               /* 文字色 */
 }
 
-.inner{
-  height: 10rem;
-  text-align: center;
+/* 訪問済リンク */
+a:visited {
+  color: #90EE90;                               /* 文字色 */
+}
+
+/* ポイント時リンク */
+a:hover {
+  color: #7B68EE;                               /* 文字色 */
+}
+
+/* 選択中リンク */
+a:active {
+  color: #DC143C;                               /* 文字色 */
+}
+
+ul {
+  list-style: none;                             /* マーカー表示OFF */
+  margin:0;                                     /* マージン */
+  padding:0;                                    /* パディング */
+}
+
+li { 
+  padding-left: 1em;                            /* 左パディング */ 
+}
+
+li:before {
+    content: "✗";                               /* ユーザー定義のマーカー */
+    color: #D3D3D3;                             /* マーカー色 */
+    color: #DC143C;                             /* マーカー色 */
+    padding-right: .8em;                        /* 左パディング */ 
 }

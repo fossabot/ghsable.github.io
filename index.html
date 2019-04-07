@@ -32,7 +32,8 @@
      to render visual content ASAP
      Specify the URI of stylesheets in href attribute -->
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+<!-- Font Awesome(https://fontawesome.com) -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 <!-- Load htmlshiv and Respond.js for IE 9+ support
      of HTML5 elements and media queries -->
@@ -56,26 +57,44 @@
      Example: <script src="" async></script> -->
 </head>
 <body>
-
 <!-- Place your content here -->
 <!-- <a href="http://sixrevisions.com/html5/html5-template/">Read the tutorial</a> -->
 
-  <h1>Social media...</h1>
-    <ul>
-      <li><a href="https://www.youtube.com/user/SunaTune">YouTube</a></li>
-      <li><a href="https://www.twitch.tv/necosuna">Twitch</a></li>
-    </ul>
+<!-- Navigation bar -->
+  <nav>
+  　<ul>
+　  　<li><a href=”#”>About</a></li>
+  　</ul>
+  </nav>
 
-  <h1>Skill...</h1>
-    <ul>
-      <li><a href="https://ghsable.github.io/dotfiles/">Dotfiles</a></li>
-    </ul>
+  <div id="about">
+    <h1># Social media...</h1>
+      <ul>
+        <li><a href="https://www.youtube.com/user/SunaTune">YouTube</a></li>
+        <li><a href="https://www.twitch.tv/necosuna">Twitch</a></li>
+      </ul>
 
-  <h1>Equipment used...</h1>
-    <ul>
-      <li><a href="https://www.iodata.jp/product/av/capture/gv-usb3hd/index.htm">GV-USB3/HD</a></li>
-      <li><a href="https://www.iodata.jp/product/av/capture/gv-hdrec/index.htm">GV-HDREC</a></li>
-    </ul>
+    <h1>Skill...</h1>
+      <ul>
+        <li><a href="https://ghsable.github.io/dotfiles/">Dotfiles</a></li>
+      </ul>
+
+    <h1>Equipment used...</h1>
+      <ul>
+        <li><a href="https://www.iodata.jp/product/av/capture/gv-usb3hd/index.htm">GV-USB3/HD</a></li>
+        <li><a href="https://www.iodata.jp/product/av/capture/gv-hdrec/index.htm">GV-HDREC</a></li>
+      </ul>
+  </div>
+
+<div id="demo-1">
+<div class="cube">
+<div class="front"></div>
+<div class="left"></div>
+<div class="right"></div>
+<div class="back"></div>
+<div class="top"></div>
+<div class="bottom"></div>
+</div>
 
 <!-- Put render-blocking scripts here if possible
      and use async attribute if possible -->

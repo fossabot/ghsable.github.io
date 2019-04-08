@@ -16,7 +16,7 @@ html {
   /* 背景画像をブラウザ全体に表示 */
   background-image: url(images/background.jpg); /* 背景画像 */
   background-position: center center;           /* 背景:上下左右中央 */
-  background-repeat: no-repeat;                 /* 背景:タイル状に繰り返し表示 */
+  background-repeat: no-repeat;                 /* 背景:タイル状に繰り返し表示しない */
   background-attachment: fixed;                 /* 背景:コンテンツの高さが大きい時、動かないように固定 */
   background-size: cover;                       /* 背景:表示するコンテナの大きさに基づいてサイズ調整 */
   background-color: #000000;                    /* 背景:読込み前に表示される背景色 */
@@ -26,9 +26,8 @@ body {
   text-align: left;                             /* 文字位置 */
   margin:3em;                                   /* マージン(全体位置) */
   padding:0;                                    /* パディング(marginで調整) */
-  font-size: 20px;                              /* フォントサイズ */
+  font-size: 19px;                              /* フォントサイズ */
   font-family: 'ZCOOL XiaoWei', 'monospace';    /* フォント(一部外部フォント) */
-  font-feature-settings: "calt" 1;              /* 前後関係に依存する字形機能(合字フォントとの調停) */
 }
 
 h1 {
@@ -82,15 +81,15 @@ li:before {
 
 /* --- ナビゲーションバー --- */
 nav {
-  /* ナビゲーションバーを上部に固定 */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  background-color: #333;
-  height: 60px;
-  line-height: 100%;
+  /* ナビゲーションバーを画面上部に常に固定 */
+  position: fixed;                              /* 固定表示 */
+  top: 0;                                       /* 上端配置 */
+  left: 0;                                      /* 左端配置 */
+  width: 100%;                                  /* 幅100% */
+  z-index: 9999;                                /* 重なりの順序:最大 */
+  background-color: #333;                       /* 背景色 */
+  height: 60px;                                 /* 背景領域の高さ */
+  line-height: 100%;                            /* 文字+余白の高さ */
 }
 
 nav ul {
@@ -107,16 +106,36 @@ nav li:before {
   content: "";                                  /* ユーザー定義のマーカーOFF */
 }
 
+#main {
+  position: relative;                           /* 子要素のposition:absoluteとの調停 */
+}
+
 #about {
-  z-index: 1;
+  position: absolute;                           /* 親要素mainを基準とした絶対位置指定を有効 */
+}
+
+footer {
+  /* フッターを画面下部に固定 */
+  position: fixed;                              /* 固定表示 */
+  bottom: 0;                                    /* 下端配置 */
+  left: 0;                                      /* 左端配置 */
+  width: 100%;                                  /* 幅100% */
+  background-color: #333;                       /* 背景色 */
+  height: 40px;                                 /* 背景領域の高さ */
+  line-height: 100%;                            /* 文字+余白の高さ */
+}
+
+footer p {
+  text-align: center;                           /* 文字位置 */
+  margin-top: .5em;                             /* マージン(上) */
 }
 
 /* --- 回転キューブ --- */
 #demo-1 {
-  margin: 10px 0;
-  z-index: 2;
+  position: absolute;                           /* 親要素mainを基準とした絶対位置指定を有効 */
+  margin-top: 8em;                              /* マージン(上) */
+  margin-left: 8em;                             /* マージン(左) */
 }
- 
 #demo-1 .cube {
   animation: rotateCube 5s infinite linear;
   height: 200px;
@@ -127,7 +146,6 @@ nav li:before {
   transform-style: preserve-3d;
   width: 200px;
 }
- 
 @keyframes rotateCube {
   0% {
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
@@ -137,7 +155,6 @@ nav li:before {
     transform: perspective(1000px) rotateX(-360deg) rotateY(-360deg);
   }
 }
- 
 #demo-1 .cube div {
   background-color: rgba(162, 176, 206, 0.1);
   border: 1px solid #A2B0CE;
@@ -147,32 +164,26 @@ nav li:before {
   top: 0;
   width: 200px;
 }
- 
 /*front*/
 #demo-1 .cube .front {
   position: relative;
 }
- 
 /*left*/
 #demo-1 .cube .left {
   transform: rotateY(-90deg) translate3d(-100px, 0, 100px);
 }
- 
 /*right*/
 #demo-1 .cube .right {
   transform: rotateY(90deg) translate3d(100px, 0, 100px);
 }
- 
 /*back*/
 #demo-1 .cube .back {
   transform: translate3d(0, 0, -200px);
 }
- 
 /*top*/
 #demo-1 .cube .top {
   transform: rotateX(-90deg) translate3d(0, 100px, -100px);
 }
- 
 /*bottom*/
 #demo-1 .cube .bottom {
   transform: rotateX(90deg) translate3d(0, -100px, -100px);

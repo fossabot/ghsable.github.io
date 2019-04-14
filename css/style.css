@@ -1,0 +1,260 @@
+/* ------------------------- @ ------------------------- */
+
+/* zcool-xiaowei-regular - latin */
+@font-face {
+  font-family: 'ZCOOL XiaoWei';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/zcool-xiaowei-v2-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('ZCOOL XiaoWei Regular'), local('ZCOOLXiaoWei-Regular'),
+       url('../fonts/zcool-xiaowei-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/zcool-xiaowei-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/zcool-xiaowei-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/zcool-xiaowei-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/zcool-xiaowei-v2-latin-regular.svg#ZCOOLXiaoWei') format('svg'); /* Legacy iOS */
+}
+
+/* ------------------------- Tag ------------------------- */
+
+body {
+  /* 文字 */
+  font-size: 20px;                                   /* フォントサイズ */
+  font-family: 'ZCOOL XiaoWei', 'sans-serif';        /* フォント(一部外部フォント) */
+  color: #D3D3D3;                                    /* 文字色 */
+  /* 背景 */
+  background-color: #696969;                         /* 背景色 */
+  background-image: url("../images/background.jpg"); /* 背景画像 */
+  background-repeat: no-repeat;                      /* タイル状に繰り返し表示しない */
+  background-position: center center;                /* 背景:上下左右中央 */
+  background-size: cover;                            /* コンテナの大きさに基づいて自動拡大縮小 */
+  background-attachment: fixed;                      /* コンテンツの高さが大きい時、動かないように固定 */
+}
+
+a {
+  margin: 0;                                         /* マージン無効 */
+  padding: 0;                                        /* パディング無効 */
+  text-decoration: none;                             /* リンクの下線を非表示 */
+}
+
+/* 未訪問,訪問済,選択中(tab),選択中(カーソル),クリック時 リンク色(順序遵守) */
+a:link    { color: #90EE90; }
+a:visited { color: #90EE90; }
+a:focus   { color: #7B68EE; }
+a:hover   { color: #7B68EE; }
+a:active  { color: #DC143C; }
+
+/* ------------------------- ID(属性) ------------------------- */
+
+#articleDetail {
+  margin: 0;                                         /* マージン無効 */
+  padding: 0;                                        /* パディング無効 */
+  width: 100%;                                       /* 横幅 */
+}
+
+/* ページヘッダー */
+#articleDetail #articleDetailHead {
+  margin: 0;                                         /* マージン無効 */
+  padding: 0;                                        /* パディング無効 */
+  width: 100%;                                       /* 横幅 */
+  background-color: #000000;                         /* 背景色 */
+}
+
+#articleDetail #articleDetailHead #articleDetailHeadNavi ul {
+  margin: 0;                                         /* マージン無効 */
+  padding: 0;                                        /* パディング無効 */
+}
+
+#articleDetail #articleDetailHead #articleDetailHeadNavi ul:after {
+  /* floatの不具合解消 */
+  content: "";                                       /* <li>の最後に空文字を追加 */
+  clear: both;                                       /* 空文字に対して回り込み解除 */
+  display: block;                                    /* 空文字を含めてブロック要素化 */
+}
+
+#articleDetail #articleDetailHead #articleDetailHeadNavi ul li {
+  list-style: none;                                  /* マーカー表示OFF */
+  float: left;                                       /* 要素を左に寄せて後続の<li>を右回り込み */
+  width: 150px;                                      /* 横幅 */
+  box-sizing: border-box;                            /* 横幅に罫線とパディング値を含める */
+  text-align: center;                                /* 文字位置 */
+  font-size: 25px;                                   /* フォントサイズ */
+  line-height: 2.0;                                  /* 文字+余白の高さ(擬似上下中央寄せ) */
+  color: #C48546;                                    /* 文字色 */
+}
+
+/* ページボディー(セクション) */
+#articleDetail #articleDetailBody {
+  margin-top: 80px;                                  /* 上マージン(positionプロパティとの調停) */ 
+  margin-right: 0;                                   /* 右マージン */ 
+  margin-bottom: 50px;                               /* 下マージン(positionプロパティとの調停) */ 
+  margin-left: 0;                                    /* 左マージン */ 
+  padding: 0;                                        /* パディング無効 */
+}
+
+/* ページフッター */
+#articleDetail #articleDetailFoot {
+  margin: 0;                                         /* マージン無効 */
+  padding: 0;                                        /* パディング無効 */
+  width: 100%;                                       /* 横幅 */
+  background-color: #000000;                         /* 背景色 */
+}
+
+#articleDetail #articleDetailFoot aside #copyright {
+  margin: 0;                                         /* マージン無効 */
+  padding: 0;                                        /* パディング無効 */
+  font-size: 19px;                                   /* フォントサイズ */
+  line-height: 1.3;                                  /* 文字+余白の高さ(擬似上下中央寄せ) */
+  text-align: center;                                /* 文字位置 */
+}
+
+/* ------------------------- ID属性(positionプロパティ専用) ------------------------- */
+
+#page {
+}
+
+#page #box1 {
+  width: 100%;                                       /* 横幅 */
+  position: fixed;                                   /* 絶対配置(スクロール対応) */
+  top: 0;                                            /* 上端配置 */
+  left: 0;                                           /* 左端配置 */
+  z-index: 10;                                       /* 重なり順序:最大 */
+}
+
+#page #box2 {
+  width: 100%;                                       /* 横幅 */
+  position: relative;                                /* 相対配置(元の配置を基準) */
+  z-index: 9;                                        /* 重なり順序:最大-1 */
+}
+
+#page #box3 {
+  width: 100%;                                       /* 横幅 */
+  position: fixed;                                   /* 絶対配置(スクロール対応) */
+  bottom: 0;                                         /* 上端配置 */
+  left: 0;                                           /* 左端配置 */
+  z-index: 10;                                       /* 重なり順序:最大 */
+}
+
+/* ------------------------- Class属性 ------------------------- */
+
+#articleDetail #articleDetailBody .articleDetailBodyList {
+  margin-top: 35px;                                  /* 上マージン */ 
+  margin-right: 0;                                   /* 右マージン */ 
+  margin-bottom: 10px;                               /* 下マージン */ 
+  margin-left: 30px;                                 /* 左マージン */ 
+  padding-top: 0;                                    /* 上マージン */ 
+  padding-right: 0;                                  /* 右マージン */ 
+  padding-bottom: 15px;                              /* 下マージン */ 
+  padding-left: 5px;                                 /* 左マージン */ 
+  width: 250px;                                      /* 横幅 */
+  background-color: #282828;                         /* 背景色 */
+  /* フェードイン */
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+#articleDetail #articleDetailBody .articleDetailBodyList h1 {
+  margin-top: 0;                                     /* 上マージン */ 
+  margin-right: 0;                                   /* 右マージン */ 
+  margin-bottom: 20px;                               /* 下マージン */ 
+  margin-left: 0;                                    /* 左マージン */ 
+  padding: 0;                                        /* パディング無効 */
+  display: inline-block;                             /* インライン要素化(ボーダーとの調停) */
+  border-bottom: 1px solid #C71585;                  /* ボーダー */
+  font-size: 35px;                                   /* フォントサイズ */
+  color: #87CEFA;                                    /* 文字色 */
+}
+
+#articleDetail #articleDetailBody .articleDetailBodyList ul {
+  margin-top: 0;                                     /* 上マージン */ 
+  margin-right: 0;                                   /* 右マージン */ 
+  margin-bottom: 0;                                  /* 下マージン */ 
+  margin-left: 1em;                                  /* 左マージン */ 
+  padding: 0;                                        /* パディング無効 */
+}
+
+#articleDetail #articleDetailBody .articleDetailBodyList ul li {
+  list-style: none;                                  /* マーカー表示OFF */
+  line-height: 1.0;                                  /* <li>の文字の高さ(行間) */
+}
+
+#articleDetail #articleDetailBody .articleDetailBodyList ul li:before {
+  content: "✗";                                      /* ユーザー定義のマーカー */
+  color: #D3D3D3;                                    /* マーカー色 */
+  color: #DC143C;                                    /* マーカー色 */
+  padding-right: .8em;                               /* 右パディング(contentと<li>の間) */ 
+}
+
+/* ------------------------- 外部プラグイン系 ------------------------- */
+
+/* --- 回転キューブ --- */
+#demo-1 {
+  margin: 0;                                         /* マージン無効 */
+  padding: 0;                                        /* パディング無効 */
+  position: relative;                                /* 相対配置(元の配置を基準) */
+  bottom: 550px;                                     /* 下基準配置 */
+  right: 200px;                                      /* 右基準配置 */
+}
+#demo-1 .cube {
+  animation: rotateCube 5s infinite linear;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  transform: perspective(1000px);
+  transform-origin: 50% 50% -100px;
+  transform-style: preserve-3d;
+  width: 200px;
+}
+@keyframes rotateCube {
+  0% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateX(-360deg) rotateY(-360deg);
+  }
+}
+#demo-1 .cube div {
+  background-color: rgba(162, 176, 206, 0.1);
+  border: 1px solid #A2B0CE;
+  height: 200px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 200px;
+}
+/*front*/
+#demo-1 .cube .front {
+  position: relative;
+}
+/*left*/
+#demo-1 .cube .left {
+  transform: rotateY(-90deg) translate3d(-100px, 0, 100px);
+}
+/*right*/
+#demo-1 .cube .right {
+  transform: rotateY(90deg) translate3d(100px, 0, 100px);
+}
+/*back*/
+#demo-1 .cube .back {
+  transform: translate3d(0, 0, -200px);
+}
+/*top*/
+#demo-1 .cube .top {
+  transform: rotateX(-90deg) translate3d(0, 100px, -100px);
+}
+/*bottom*/
+#demo-1 .cube .bottom {
+  transform: rotateX(90deg) translate3d(0, -100px, -100px);
+}
+
+/* フェードイン */
+@keyframes fadein {
+from {
+    opacity: 0;
+    transform: translateX(100px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}

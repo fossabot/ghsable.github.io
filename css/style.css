@@ -149,7 +149,7 @@ a:active  { color: #DC143C; }
   background-color: #282828;                         /* 背景色 */
   /* フェードイン */
   animation-name: fadein;
-  animation-duration: 3s;
+  animation-duration: 1s;
 }
 
 #articleDetail #articleDetailBody .articleDetailBodyList h1 {
@@ -251,7 +251,7 @@ a:active  { color: #DC143C; }
 @keyframes fadein {
 from {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(30px);
 }
 to {
     opacity: 1;

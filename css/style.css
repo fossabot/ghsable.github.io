@@ -192,7 +192,7 @@ a:active  { color: #DC143C; }
   padding: 0;                                        /* パディング無効 */
   position: relative;                                /* 相対配置(元の配置を基準) */
   bottom: 550px;                                     /* 下基準配置 */
-  right: 200px;                                      /* 右基準配置 */
+  right: 0;                                          /* 右基準配置 */
 }
 #demo-1 .cube {
   animation: rotateCube 5s infinite linear;

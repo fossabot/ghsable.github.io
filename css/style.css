@@ -126,6 +126,30 @@ a:active  { color: #DC143C; }
   z-index: 9;                                        /* 重なり順序:最大-1 */
 }
 
+#page #box2-fade {
+  /* 初回フェードイン */
+  animation-name: fadein;                            /* @keyframes呼出でfadeinアニメーション */
+  animation-duration: 2s;                            /* アニメーション時間 */
+  /* 初回以降フェードイン */
+  transition: opacity 1s, visibility 0s ease 1s;     /* アニメーション時間 */
+  transition-delay: 0s;                              /* アニメーション開始までのディレイ時間 */
+}
+
+/* javascript側で.is-showを付与 */
+#page #box2-fade.is-show { 
+  /* フェードアウト */
+  transition: opacity 1s, visibility 0s ease 1s;     /* アニメーション時間 */
+  opacity: 0;                                        /* 画面非表示(透明度) */
+  visibility: hidden;                                /* 画面非表示(ボックス) */
+}
+
+#page #box2-cubebox { 
+  position: fixed;                                   /* 絶対配置(スクロール対応) */
+  bottom: 250px;                                     /* 下基準配置 */
+  left: 500px;                                       /* 左基準配置 */
+  z-index: 0;                                        /* 重なり順序:最大 */
+}
+
 #page #box3 {
   width: 100%;                                       /* 横幅 */
   position: fixed;                                   /* 絶対配置(スクロール対応) */
@@ -147,9 +171,6 @@ a:active  { color: #DC143C; }
   padding-left: 5px;                                 /* 左マージン */ 
   width: 250px;                                      /* 横幅 */
   background-color: #282828;                         /* 背景色 */
-  /* フェードイン */
-/*  animation-name: fadein; */
-/*  animation-duration: 1s; */
 }
 
 #articleDetail #articleDetailBody .articleDetailBodyList h1 {
@@ -184,77 +205,99 @@ a:active  { color: #DC143C; }
   padding-right: .8em;                               /* 右パディング(contentと<li>の間) */ 
 }
 
-/* ------------------------- 外部プラグイン系 ------------------------- */
+/* ------------------------- オブジェクト ------------------------- */
 
-/* --- 回転キューブ --- */
-#demo-1 {
-  margin: 0;                                         /* マージン無効 */
-  padding: 0;                                        /* パディング無効 */
-  position: relative;                                /* 相対配置(元の配置を基準) */
-  bottom: 550px;                                     /* 下基準配置 */
-  left: 100px;                                       /* 左基準配置 */
+/* --- 3D CSS Animated Cube(https://www.codicode.com/demo/animated_3d_css_cube/) --- */
+.wrap {
+  margin-top: 150px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
 }
-#demo-1 .cube {
-  animation: rotateCube 5s infinite linear;
-  height: 200px;
-  margin: 0 auto;
+.cube {
+  margin: auto;
   position: relative;
-  transform: perspective(1000px);
-  transform-origin: 50% 50% -100px;
+  height: 200px;
+  width: 200px;
   transform-style: preserve-3d;
-  width: 200px;
 }
-@keyframes rotateCube {
-  0% {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-  }
-
-  100% {
-    transform: perspective(1000px) rotateX(-360deg) rotateY(-360deg);
-  }
-}
-#demo-1 .cube div {
-  background-color: rgba(162, 176, 206, 0.1);
-  border: 1px solid #A2B0CE;
-  height: 200px;
-  left: 0;
+.cube > div {
   position: absolute;
-  top: 0;
-  width: 200px;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  background-color: #000;
+  border: solid 1px #eeeeee;
+  color: #ffffff;
 }
-/*front*/
-#demo-1 .cube .front {
-  position: relative;
+.front {
+  transform: translateZ(100px);
 }
-/*left*/
-#demo-1 .cube .left {
-  transform: rotateY(-90deg) translate3d(-100px, 0, 100px);
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
 }
-/*right*/
-#demo-1 .cube .right {
-  transform: rotateY(90deg) translate3d(100px, 0, 100px);
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
 }
-/*back*/
-#demo-1 .cube .back {
-  transform: translate3d(0, 0, -200px);
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
 }
-/*top*/
-#demo-1 .cube .top {
-  transform: rotateX(-90deg) translate3d(0, 100px, -100px);
+.top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
 }
-/*bottom*/
-#demo-1 .cube .bottom {
-  transform: rotateX(90deg) translate3d(0, -100px, -100px);
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+.cube {
+  animation: rotate 20s infinite linear;
+}
+.wrap:hover .front {
+  transform: translateZ(200px);
+}
+.wrap:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+.wrap:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+.wrap:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+.wrap:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+.wrap:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+.cube > div {
+  transition: transform 0.5s ease-in;
 }
 
-/* フェードイン */
+/* ------------------------- アニメーション ------------------------- */
+
+/* --- フェードイン(初回のみ) --- */
 @keyframes fadein {
 from {
-  opacity: 0;
-  transform: translateX(30px);
+  opacity: 0;                                        /* 画面非表示(透明度) */
+  transform: translateX(30px);                       /* 表示開始位置(X軸) */
+  visibility: hidden;                                /* 画面非表示(ボックス) */
 }
 to {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1;                                        /* 画面表示(透明度) */
+  transform: translateY(0);                          /* 表示開始位置(Y軸) */
+  visibility: visible;                               /* 画面表示(ボックス) */
 }
 }

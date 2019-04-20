@@ -67,14 +67,15 @@
     <!-- Navigation bar -->
     <nav id="articleDetailHeadNavi">
       <ul>
-        <li><label><input type="radio" name="cmd-btn" id="fadeout"><i class="fas fa-power-off"></i></label></li>
-        <li><label><input type="radio" name="cmd-btn" id="fadein" checked><i class="fas fa-home"></i></label></li>
+        <li><label><input type="checkbox" name="btn_power" id="btn_power"><i class="fas fa-power-off"></i></label></li>
+        <li><label><input type="checkbox" name="btn_home" id="btn_home"><i class="fas fa-home"></i></label></li>
       </ul>
     </nav>
   </header>
   </div>
 
   <div id="box2">
+  <div id="box2-fade">
   <section id="articleDetailBody">
     <section class="articleDetailBodyList">
       <h1># Broadcast</h1>
@@ -128,18 +129,33 @@
         <li><a href="https://www.amazon.jp/hz/wishlist/ls/2VX9TT6G43DHR?ref_=wl_share">Amazon</a></li>
       </ul>
     </section>
+  </div>
 
     <!-- 回転キューブ -->
-    <section id="demo-1">
+    <div id="box2-cubebox">
+    <div class="wrap">
       <div class="cube">
-        <div class="front"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="back"></div>
-        <div class="top"></div>
-        <div class="bottom"></div>
+        <div class="front">
+          Front side
+        </div>
+        <div class="back">
+          Back side
+        </div>
+        <div class="top">
+          Top side
+        </div>
+        <div class="bottom">
+          Bottom side
+        </div>
+        <div class="left">
+          Left side
+        </div>
+        <div class="right">
+          Right side
+        </div>
       </div>
-    </section>
+    </div>
+    </div>
 
   </section>
   </div>

@@ -229,8 +229,8 @@ a:active  { color: #DC143C; }
   transition: .4s;
 }
 
-#realbtn_a:active,
-#realbtn_b:active {
+#realbtn_a:hover,
+#realbtn_b:hover {
   -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
 }

@@ -208,6 +208,33 @@ a:active  { color: #DC143C; }
 
 /* ------------------------- オブジェクト ------------------------- */
 
+/* --- ボタンデザイン(https://saruwakakun.com/html-css/reference/buttons#section4) --- */
+#btn_power,
+#btn_home {
+  display: none;
+}
+
+#realbtn_a,
+#realbtn_b  {
+  display: inline-block;
+  text-decoration: none;
+  color: #C48546;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, #000000 0%, #000000 100%);
+  transition: .4s;
+}
+
+#realbtn_a:hover,
+#realbtn_b:hover {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
 /* --- 3D CSS Animated Cube(https://www.codicode.com/demo/animated_3d_css_cube/) --- */
 .wrap {
   margin-top: 150px;
@@ -302,3 +329,5 @@ to {
   visibility: visible;                               /* 画面表示(ボックス) */
 }
 }
+
+/* ------------------------- EOF ------------------------- */

@@ -283,6 +283,24 @@ a:active  { color: #DC143C; }
 .wrap:hover .bottom {
   transform: rotateX(270deg) translateZ(100px) translateY(100px);
 }
+.wrap:active .front {
+  transform: translateZ(200px);
+}
+.wrap:active .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+.wrap:active .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+.wrap:active .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+.wrap:active .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+.wrap:active .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
 .cube > div {
   transition: transform 0.5s ease-in;
 }

@@ -22,7 +22,7 @@ body {
   font-family: 'ZCOOL XiaoWei', 'sans-serif';        /* フォント(一部外部フォント) */
   color: #D3D3D3;                                    /* 文字色 */
   /* 背景 */
-  background-color: #696969;                         /* 背景色 */
+  background-color: #000000;                         /* 背景色 */
   background-image: url("../images/background.jpg"); /* 背景画像 */
   background-repeat: no-repeat;                      /* タイル状に繰り返し表示しない */
   background-position: center center;                /* 背景:上下左右中央 */
@@ -281,24 +281,6 @@ a:active  { color: #DC143C; }
   transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
 }
 .wrap:hover .bottom {
-  transform: rotateX(270deg) translateZ(100px) translateY(100px);
-}
-.wrap:active .front {
-  transform: translateZ(200px);
-}
-.wrap:active .back {
-  transform: translateZ(-200px) rotateY(180deg);
-}
-.wrap:active .right {
-  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
-}
-.wrap:active .left {
-  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
-}
-.wrap:active .top {
-  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
-}
-.wrap:active .bottom {
   transform: rotateX(270deg) translateZ(100px) translateY(100px);
 }
 .cube > div {

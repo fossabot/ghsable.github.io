@@ -145,8 +145,8 @@ a:active  { color: #DC143C; }
 
 #page #box2-cubebox { 
   position: fixed;                                   /* 絶対配置(スクロール対応) */
-  top: 150px;                                        /* 下基準配置 */
-  left: 300px;                                       /* 左基準配置 */
+  top: 25%;                                          /* 下基準配置 */
+  left: 20%;                                         /* 左基準配置 */
   z-index: 0;                                        /* 重なり順序:最大 */
 }
 

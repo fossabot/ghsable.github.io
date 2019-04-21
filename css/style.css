@@ -121,12 +121,13 @@ a:active  { color: #DC143C; }
 }
 
 #page #box2 {
-  width: 100%;                                       /* 横幅 */
   position: relative;                                /* 相対配置(元の配置を基準) */
-  z-index: 9;                                        /* 重なり順序:最大-1 */
 }
 
-#page #box2-fade {
+#page #box2-content {
+  /* 親要素基準に配置 */
+  position: absolute;                                /* 親要素基準の絶対配置(スクロール対応) */
+  z-index: 9;                                        /* 重なり順序:最大-1 */
   /* 初回フェードイン */
   animation-name: fadein;                            /* @keyframes呼出でfadeinアニメーション */
   animation-duration: 2s;                            /* アニメーション時間 */
@@ -136,7 +137,7 @@ a:active  { color: #DC143C; }
 }
 
 /* javascript側で.is-showを付与 */
-#page #box2-fade.is-show { 
+#page #box2-content.is-show { 
   /* フェードアウト */
   transition: opacity 1s, visibility 0s ease 1s;     /* アニメーション時間 */
   opacity: 0;                                        /* 画面非表示(透明度) */
@@ -145,9 +146,9 @@ a:active  { color: #DC143C; }
 
 #page #box2-cubebox { 
   position: fixed;                                   /* 絶対配置(スクロール対応) */
-  top: 25%;                                          /* 下基準配置 */
-  left: 20%;                                         /* 左基準配置 */
-  z-index: 0;                                        /* 重なり順序:最大 */
+  bottom: 30%;                                       /* 下基準配置 */
+  right: 70%;                                        /* 左基準配置 */
+  z-index: 0;                                        /* 重なり順序:最小 */
 }
 
 #page #box3 {

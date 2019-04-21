@@ -147,7 +147,7 @@ a:active  { color: #DC143C; }
 #page #box2-cubebox { 
   position: fixed;                                   /* 絶対配置(スクロール対応) */
   bottom: 30%;                                       /* 下基準配置 */
-  right: 55%;                                        /* 右基準配置 */
+  right: 45%;                                        /* 右基準配置 */
   z-index: 0;                                        /* 重なり順序:最小 */
 }
 

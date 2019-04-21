@@ -214,6 +214,13 @@ a:active  { color: #DC143C; }
   display: none;
 }
 
+/* 未訪問,訪問済,選択中(tab),選択中(カーソル),クリック時 リンク色(順序遵守) */
+#btnl_home:link    { color: #C48546; }
+#btnl_home:visited { color: #C48546; }
+#btnl_home:focus   { color: #C48546; }
+#btnl_home:hover   { color: #C48546; }
+#btnl_home:active  { color: #C48546; }
+
 #realbtn_a,
 #realbtn_b  {
   display: inline-block;

@@ -10,11 +10,10 @@ btn_power.onclick = function () {
 
 // --- メッセージ表示+リンク誘導
 // 変数定義
-var btn_home = document.getElementById('btn_home');
+var btnl_home = document.getElementById('btnl_home');
 
 // ボタンクリック時にアラート表示
 // 熱帯雨林の植林活動の支援をさせる
-btn_home.onclick = function () {
+btnl_home.onclick = function () {
   alert('隴西の李徴「うわぁああぁああああぁあaーーーーー」');
-  location.href = 'https://www.ecosia.org';
 }

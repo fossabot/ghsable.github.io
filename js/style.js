@@ -15,5 +15,15 @@ var btnl_home = document.getElementById('btnl_home');
 // ボタンクリック時にアラート表示
 // 熱帯雨林の植林活動の支援をさせる
 btnl_home.onclick = function () {
-  alert('隴西の李徴「うわぁああぁああああぁあaーーーーー」');
+  alert('隴西の李徴「うわぁああぁーーー!!」');
 }
+
+// --- 波紋エフェクト
+// sirxemic/jquery.ripples(https://github.com/sirxemic/jquery.ripples)
+$(document).ready(function() {
+  $('.articleDetailBodyList').ripples({  //波紋をつける要素を指定
+  resolution: 400,                       //波紋が広がる速さ
+  dropRadius: 8,                         //波紋の大きさ
+  perturbance: 0.8                       //波紋の揺れの量
+  });
+});

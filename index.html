@@ -60,22 +60,16 @@
 <body>
 <!-- Place your content here -->
 <!-- <a href="http://sixrevisions.com/html5/html5-template/">Read the tutorial</a> -->
-<div id="page">
-<article id="articleDetail">
-  <div id="box1">
-  <header id="articleDetailHead">
-    <!-- Navigation bar -->
-    <nav id="articleDetailHeadNavi">
-      <ul>
-        <li><label><input type="checkbox" name="btn_power" id="btn_power"><div id="realbtn_a"><i class="fas fa-power-off"></i></div></label></li>
-        <li><label><input type="checkbox" name="btn_home" id="btn_home"><div id="realbtn_b"><a id="btnl_home" href="https://www.ecosia.org"><i class="fas fa-home"></i></a></div></label></li>
-      </ul>
-    </nav>
-  </header>
-  </div>
+<header>
+  <nav>
+    <ul>
+      <li><label id="btn_power"><input type="checkbox" name="btn_power"><i class="fas fa-power-off"></i></label></li>
+      <li><label id="btn_home"><input type="checkbox" name="btn_home"><a href="https://www.ecosia.org"><i class="fas fa-home"></i></a></label></li>
+    </ul>
+  </nav>
+</header>
 
-  <div id="box2">
-  <div id="box2-content">
+<article id="articleDetail">
   <section id="articleDetailBody">
     <section class="articleDetailBodyList">
       <h1># Broadcast</h1>
@@ -130,44 +124,38 @@
         <li><a href="https://www.amazon.jp/hz/wishlist/ls/2VX9TT6G43DHR?ref_=wl_share">Amazon</a></li>
       </ul>
     </section>
-  </div>
-    <!-- 3D CSS Animated Cube(https://www.codicode.com/demo/animated_3d_css_cube/) -->
-    <div id="box2-cubebox">
-    <div class="wrap">
-      <div class="cube">
-        <div class="front">
-          Front side
-        </div>
-        <div class="back">
-          Back side
-        </div>
-        <div class="top">
-          Top side
-        </div>
-        <div class="bottom">
-          Bottom side
-        </div>
-        <div class="left">
-          Left side
-        </div>
-        <div class="right">
-          Right side
-        </div>
+  </section>
+
+  <!-- 3D CSS Animated Cube(https://www.codicode.com/demo/animated_3d_css_cube/) -->
+  <div id="wrap_cube">
+    <div id="cube">
+      <div id="cube_front">
+        Fr（´・ω・｀）
+      </div>
+      <div id="cube_back">
+        Ba（´・ω・｀）
+      </div>
+      <div id="cube_top">
+        To（´・ω・｀）
+      </div>
+      <div id="cube_bottom">
+        Bo（´・ω・｀）
+      </div>
+      <div id="cube_left">
+        Le（´・ω・｀）
+      </div>
+      <div id="cube_right">
+        Ri（´・ω・｀）
       </div>
     </div>
-    </div>
-  </section>
-  </div>
-
-  <div id="box3">
-  <footer id="articleDetailFoot">
-    <aside>
-      <p id="copyright"><small>Copyright&copy; 2019 @<a href="https://github.com/ghsable/ghsable.github.io">Necosuna</a> All Rights Reserved.</small></p>
-    </aside>
-  </footer>
   </div>
 </article>
-</div>
+
+<footer>
+  <aside>
+    <p id="copyright"><small>Copyright&copy; 2019 @<a href="https://github.com/ghsable/ghsable.github.io">Necosuna</a> All Rights Reserved.</small></p>
+  </aside>
+</footer>
 
 <!-- Put render-blocking scripts here if possible
      and use async attribute if possible -->
@@ -175,7 +163,7 @@
 <!-- Example: <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 <!-- NOTE: jQuery 2.x is used in the script reference example above, which doesn't support IE 8 and below. -->
 <script src="./js/jquery-3.4.0.min.js"></script>
-<script src="./js/style.js"></script>
 <script src="./js/jquery.ripples-min.js"></script>
+<script src="./js/style.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@
        url('../fonts/zcool-xiaowei-v2-latin-regular.svg#ZCOOLXiaoWei') format('svg'); /* Legacy iOS */
 }
 
-/* ------------------------- Tag ------------------------- */
+/* ------------------------- All ------------------------- */
 
 body {
   /* 文字 */
@@ -25,14 +25,17 @@ body {
   background-color: #000000;                         /* 背景色 */
   background-image: url("../images/background.jpg"); /* 背景画像 */
   background-repeat: no-repeat;                      /* タイル状に繰り返し表示しない */
-  background-position: center center;                /* 背景:上下左右中央 */
+  background-position: center center;                /* 上下左右中央 */
   background-size: cover;                            /* コンテナの大きさに基づいて自動拡大縮小 */
   background-attachment: fixed;                      /* コンテンツの高さが大きい時、動かないように固定 */
 }
 
-a {
+* {
   margin: 0;                                         /* マージン無効 */
   padding: 0;                                        /* パディング無効 */
+}
+
+a {
   text-decoration: none;                             /* リンクの下線を非表示 */
 }
 
@@ -43,287 +46,101 @@ a:focus   { color: #7B68EE; }
 a:hover   { color: #7B68EE; }
 a:active  { color: #DC143C; }
 
-/* ------------------------- ID(属性) ------------------------- */
+/* ------------------------- Header/Footer ------------------------- */
 
-#articleDetail {
-  margin: 0;                                         /* マージン無効 */
-  padding: 0;                                        /* パディング無効 */
-  width: 100%;                                       /* 横幅 */
-}
-
-/* ページヘッダー */
-#articleDetail #articleDetailHead {
-  margin: 0;                                         /* マージン無効 */
-  padding: 0;                                        /* パディング無効 */
+header {
   width: 100%;                                       /* 横幅 */
   background-color: #000000;                         /* 背景色 */
-}
-
-#articleDetail #articleDetailHead #articleDetailHeadNavi ul {
-  margin: 0;                                         /* マージン無効 */
-  padding: 0;                                        /* パディング無効 */
-}
-
-#articleDetail #articleDetailHead #articleDetailHeadNavi ul:after {
-  /* floatの不具合解消 */
-  content: "";                                       /* <li>の最後に空文字を追加 */
-  clear: both;                                       /* 空文字に対して回り込み解除 */
-  display: block;                                    /* 空文字を含めてブロック要素化 */
-}
-
-#articleDetail #articleDetailHead #articleDetailHeadNavi ul li {
-  list-style: none;                                  /* マーカー表示OFF */
-  float: left;                                       /* 要素を左に寄せて後続の<li>を右回り込み */
-  width: 150px;                                      /* 横幅 */
-  box-sizing: border-box;                            /* 横幅に罫線とパディング値を含める */
-  text-align: center;                                /* 文字位置 */
   font-size: 25px;                                   /* フォントサイズ */
-  line-height: 2.0;                                  /* 文字+余白の高さ(擬似上下中央寄せ) */
   color: #C48546;                                    /* 文字色 */
-}
-
-/* ページボディー(セクション) */
-#articleDetail #articleDetailBody {
-  margin-top: 80px;                                  /* 上マージン(positionプロパティとの調停) */ 
-  margin-right: 0;                                   /* 右マージン */ 
-  margin-bottom: 50px;                               /* 下マージン(positionプロパティとの調停) */ 
-  margin-left: 0;                                    /* 左マージン */ 
-  padding: 0;                                        /* パディング無効 */
-}
-
-/* ページフッター */
-#articleDetail #articleDetailFoot {
-  margin: 0;                                         /* マージン無効 */
-  padding: 0;                                        /* パディング無効 */
-  width: 100%;                                       /* 横幅 */
-  background-color: #000000;                         /* 背景色 */
-}
-
-#articleDetail #articleDetailFoot aside #copyright {
-  margin: 0;                                         /* マージン無効 */
-  padding: 0;                                        /* パディング無効 */
-  font-size: 19px;                                   /* フォントサイズ */
-  line-height: 1.3;                                  /* 文字+余白の高さ(擬似上下中央寄せ) */
+  line-height: 0;                                    /* 行の高さ(レイアウトが1行のため) */
   text-align: center;                                /* 文字位置 */
-}
-
-/* ------------------------- ID属性(positionプロパティ専用) ------------------------- */
-
-#page {
-}
-
-#page #box1 {
-  width: 100%;                                       /* 横幅 */
+  /* 配置 */
   position: fixed;                                   /* 絶対配置(スクロール対応) */
   top: 0;                                            /* 上端配置 */
   left: 0;                                           /* 左端配置 */
   z-index: 10;                                       /* 重なり順序:最大 */
 }
 
-#page #box2 {
-  position: relative;                                /* 相対配置(元の配置を基準) */
+header nav ul li {
+  /* ヘッダーの高さ調整 */
+  margin-top: 10px;                                  /* 上マージン */
+  margin-bottom: 10px;                               /* 下マージン */
+  /* float調整 */
+  float: left;                                       /* 要素を左に寄せて後続の<li>を右回り込み */
+  list-style: none;                                  /* マーカー表示OFF */
+  box-sizing: border-box;                            /* 横幅に罫線とパディング値を含める */
+  width: 150px;                                      /* 横幅(<li>要素の間隔) */
 }
 
-#page #box2-content {
-  /* 親要素基準に配置 */
-  position: absolute;                                /* 親要素基準の絶対配置(スクロール対応) */
+/* --- ボタンデザイン(https://saruwakakun.com/html-css/reference/buttons#section4) --- */
+header nav ul li label input {
+  display: none;                                     /* チェックボックス非表示 */
+}
+/* 未訪問,訪問済,選択中(tab),選択中(カーソル),クリック時 リンク色(順序遵守) */
+header nav ul li label a:link    { color: #C48546; }
+header nav ul li label a:visited { color: #C48546; }
+header nav ul li label a:focus   { color: #C48546; }
+header nav ul li label a:hover   { color: #C48546; }
+header nav ul li label a:active  { color: #C48546; }
+/* ラベルにアニメーション属性付与可能な状態にする */
+header nav ul li label {
+  display: inline-block;                             /* インライン要素化 */
+  transition: .4s;                                   /* アニメーション時間 */
+}
+/* ラベルホバー時に傾きアニメーション */
+header nav ul li label:hover {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+header nav ul:after {
+  /* floatの不具合解消 */
+  content: "";                                       /* <li>の最後に空文字を追加 */
+  clear: both;                                       /* 空文字に対して回り込み解除 */
+  display: block;                                    /* 空文字を含めてブロック要素化 */
+}
+
+footer {
+  width: 100%;                                       /* 横幅 */
+  background-color: #000000;                         /* 背景色 */
+  font-size: 19px;                                   /* フォントサイズ */
+  line-height: 1.0;                                  /* 行の高さ */
+  text-align: center;                                /* 文字位置 */
+  /* 配置 */
+  position: fixed;                                   /* 絶対配置(スクロール対応) */
+  bottom: 0;                                         /* 下端配置 */
+  left: 0;                                           /* 左端配置 */
+  z-index: 10;                                       /* 重なり順序:最大 */
+}
+
+footer aside #copyright {
+  /* フッターの高さ調整 */
+  margin-bottom: 4px;                               /* 下マージン */
+}
+
+/* ------------------------- Body ------------------------- */
+
+#articleDetail {
+}
+
+#articleDetail #articleDetailBody {
+  /* 他要素との調停 */
+  width: 0;                                          /* 横幅(背景アニメーションとの調停) */
+  padding-top: 30px;                                 /* 上パディング(headerとの調停) */
+  padding-bottom: 50px;                              /* 下パディング(footerとの調停) */
+  /* 配置 */
+  margin-left: 30px;                                 /* 左マージン */ 
+  position: relative;                                /* 相対配置(元の配置を基準) */
   z-index: 9;                                        /* 重なり順序:最大-1 */
-  /* 初回フェードイン */
+  /* フェードイン(初回限定) */
   animation-name: fadein;                            /* @keyframes呼出でfadeinアニメーション */
   animation-duration: 2s;                            /* アニメーション時間 */
   /* 初回以降フェードイン */
   transition: opacity 1s, visibility 0s ease 1s;     /* アニメーション時間 */
   transition-delay: 0s;                              /* アニメーション開始までのディレイ時間 */
 }
-
-/* javascript側で.is-showを付与 */
-#page #box2-content.is-show { 
-  /* フェードアウト */
-  transition: opacity 1s, visibility 0s ease 1s;     /* アニメーション時間 */
-  opacity: 0;                                        /* 画面非表示(透明度) */
-  visibility: hidden;                                /* 画面非表示(ボックス) */
-}
-
-#page #box2-cubebox { 
-  position: fixed;                                   /* 絶対配置(スクロール対応) */
-  bottom: 30%;                                       /* 下基準配置 */
-  left: 20%;                                         /* 左基準配置 */
-  z-index: 0;                                        /* 重なり順序:最小 */
-}
-
-#page #box3 {
-  width: 100%;                                       /* 横幅 */
-  position: fixed;                                   /* 絶対配置(スクロール対応) */
-  bottom: 0;                                         /* 上端配置 */
-  left: 0;                                           /* 左端配置 */
-  z-index: 10;                                       /* 重なり順序:最大 */
-}
-
-/* ------------------------- Class属性 ------------------------- */
-
-#articleDetail #articleDetailBody .articleDetailBodyList {
-  margin-top: 35px;                                  /* 上マージン */ 
-  margin-right: 0;                                   /* 右マージン */ 
-  margin-bottom: 10px;                               /* 下マージン */ 
-  margin-left: 30px;                                 /* 左マージン */ 
-  padding-top: 0;                                    /* 上マージン */ 
-  padding-right: 0;                                  /* 右マージン */ 
-  padding-bottom: 15px;                              /* 下マージン */ 
-  padding-left: 5px;                                 /* 左マージン */ 
-  width: 250px;                                      /* 横幅 */
-  background-color: #282828;                         /* 背景色 */
-}
-
-#articleDetail #articleDetailBody .articleDetailBodyList h1 {
-  margin-top: 0;                                     /* 上マージン */ 
-  margin-right: 0;                                   /* 右マージン */ 
-  margin-bottom: 20px;                               /* 下マージン */ 
-  margin-left: 0;                                    /* 左マージン */ 
-  padding: 0;                                        /* パディング無効 */
-  display: inline-block;                             /* インライン要素化(ボーダーとの調停) */
-  border-bottom: 1px solid #C71585;                  /* ボーダー */
-  font-size: 35px;                                   /* フォントサイズ */
-  color: #87CEFA;                                    /* 文字色 */
-}
-
-#articleDetail #articleDetailBody .articleDetailBodyList ul {
-  margin-top: 0;                                     /* 上マージン */ 
-  margin-right: 0;                                   /* 右マージン */ 
-  margin-bottom: 0;                                  /* 下マージン */ 
-  margin-left: 1em;                                  /* 左マージン */ 
-  padding: 0;                                        /* パディング無効 */
-}
-
-#articleDetail #articleDetailBody .articleDetailBodyList ul li {
-  list-style: none;                                  /* マーカー表示OFF */
-  line-height: 1.0;                                  /* <li>の文字の高さ(行間) */
-}
-
-#articleDetail #articleDetailBody .articleDetailBodyList ul li:before {
-  content: "✗";                                      /* ユーザー定義のマーカー */
-  color: #D3D3D3;                                    /* マーカー色 */
-  color: #DC143C;                                    /* マーカー色 */
-  padding-right: .8em;                               /* 右パディング(contentと<li>の間) */ 
-}
-
-/* ------------------------- オブジェクト ------------------------- */
-
-/* --- ボタンデザイン(https://saruwakakun.com/html-css/reference/buttons#section4) --- */
-#btn_power,
-#btn_home {
-  display: none;
-}
-
-/* 未訪問,訪問済,選択中(tab),選択中(カーソル),クリック時 リンク色(順序遵守) */
-#btnl_home:link    { color: #C48546; }
-#btnl_home:visited { color: #C48546; }
-#btnl_home:focus   { color: #C48546; }
-#btnl_home:hover   { color: #C48546; }
-#btnl_home:active  { color: #C48546; }
-
-#realbtn_a,
-#realbtn_b  {
-  display: inline-block;
-  text-decoration: none;
-  color: #C48546;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 50%;
-  text-align: center;
-  overflow: hidden;
-  background-image: linear-gradient(45deg, #000000 0%, #000000 100%);
-  transition: .4s;
-}
-
-#realbtn_a:hover,
-#realbtn_b:hover {
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-
-/* --- 3D CSS Animated Cube(https://www.codicode.com/demo/animated_3d_css_cube/) --- */
-.wrap {
-  margin-top: 150px;
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
-}
-.cube {
-  margin: auto;
-  position: relative;
-  height: 200px;
-  width: 200px;
-  transform-style: preserve-3d;
-}
-.cube > div {
-  position: absolute;
-  box-sizing: border-box;
-  padding: 10px;
-  height: 100%;
-  width: 100%;
-  opacity: 0.3;
-  background-color: #000;
-  border: solid 1px #eeeeee;
-  color: #ffffff;
-}
-.front {
-  transform: translateZ(100px);
-}
-.back {
-  transform: translateZ(-100px) rotateY(180deg);
-}
-.right {
-  transform: rotateY(-270deg) translateX(100px);
-  transform-origin: top right;
-}
-.left {
-  transform: rotateY(270deg) translateX(-100px);
-  transform-origin: center left;
-}
-.top {
-  transform: rotateX(-270deg) translateY(-100px);
-  transform-origin: top center;
-}
-.bottom {
-  transform: rotateX(270deg) translateY(100px);
-  transform-origin: bottom center;
-}
-@keyframes rotate {
-  from {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  to {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-.cube {
-  animation: rotate 20s infinite linear;
-}
-.wrap:hover .front {
-  transform: translateZ(200px);
-}
-.wrap:hover .back {
-  transform: translateZ(-200px) rotateY(180deg);
-}
-.wrap:hover .right {
-  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
-}
-.wrap:hover .left {
-  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
-}
-.wrap:hover .top {
-  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
-}
-.wrap:hover .bottom {
-  transform: rotateX(270deg) translateZ(100px) translateY(100px);
-}
-.cube > div {
-  transition: transform 0.5s ease-in;
-}
-
-/* ------------------------- アニメーション ------------------------- */
-
-/* --- フェードイン(初回のみ) --- */
+/* --- フェードイン(初回限定) --- */
 @keyframes fadein {
 from {
   opacity: 0;                                        /* 画面非表示(透明度) */
@@ -335,6 +152,131 @@ to {
   transform: translateY(0);                          /* 表示開始位置(Y軸) */
   visibility: visible;                               /* 画面表示(ボックス) */
 }
+}
+
+/* javascript側で".is-show"を付与 */
+#articleDetail #articleDetailBody.is-show { 
+  /* フェードアウト */
+  transition: opacity 1s, visibility 0s ease 1s;     /* アニメーション時間 */
+  opacity: 0;                                        /* 画面非表示(透明度) */
+  visibility: hidden;                                /* 画面非表示(ボックス) */
+}
+
+#articleDetail #articleDetailBody .articleDetailBodyList {
+  /* .articleDetailBodyList同士の調停 */
+  margin-top: 35px;                                  /* 上マージン */ 
+  padding-bottom: 15px;                              /* 下マージン */ 
+  padding-left: 5px;                                 /* 左マージン */ 
+  width: 250px;                                      /* 横幅 */
+  background-color: #282828;                         /* 背景色 */
+}
+
+#articleDetail #articleDetailBody .articleDetailBodyList h1 {
+  /* 'normalize.css'との調停 */
+  font-size: 35px;                                   /* フォントサイズ */
+  margin: 0;                                         /* マージン無効 */
+  margin-bottom: 20px;                               /* 下マージン */ 
+  padding: 0;                                        /* パディング無効 */
+  /* 装飾 */
+  color: #87CEFA;                                    /* 文字色 */
+  display: inline-block;                             /* インライン要素化(ボーダーとの調停) */
+  border-bottom: 1px solid #C71585;                  /* ボーダー */
+}
+
+#articleDetail #articleDetailBody .articleDetailBodyList ul li {
+  margin-left: 1em;                                  /* 左マージン */ 
+  list-style: none;                                  /* マーカー表示OFF */
+  line-height: 1.0;                                  /* <li>の文字の高さ(行間) */
+}
+
+#articleDetail #articleDetailBody .articleDetailBodyList ul li:before {
+  content: "✗";                                      /* ユーザー定義のマーカー */
+  color: #DC143C;                                    /* マーカー色 */
+  padding-right: .8em;                               /* 右パディング(contentと<li>の間) */ 
+}
+
+/* --- 3D CSS Animated Cube(https://www.codicode.com/demo/animated_3d_css_cube/) --- */
+#wrap_cube {
+  margin-top: 150px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  /* 配置 */
+  position: fixed;                                   /* 絶対配置(スクロール対応) */
+  bottom: 30%;                                       /* 下基準配置 */
+  left: 20%;                                         /* 左基準配置 */
+  z-index: 0;                                        /* 重なり順序:最小 */
+}
+#cube {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+#cube > div {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  background-color: #000;
+  border: solid 1px #eeeeee;
+  color: #ffffff;
+}
+#cube #cube_front {
+  transform: translateZ(100px);
+}
+#cube #cube_back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+#cube #cube_right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+#cube #cube_left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+#cube #cube_top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+#cube #cube_bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+#cube {
+  animation: rotate 20s infinite linear;
+}
+#wrap_cube:hover #cube #cube_front {
+  transform: translateZ(200px);
+}
+#wrap_cube:hover #cube #cube_back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+#wrap_cube:hover #cube #cube_right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+#wrap_cube:hover #cube #cube_left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+#wrap_cube:hover #cube #cube_top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+#wrap_cube:hover #cube #cube_bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+#cube > div {
+  transition: transform 0.5s ease-in;
 }
 
 /* ------------------------- EOF ------------------------- */

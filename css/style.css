@@ -121,6 +121,47 @@ footer aside #copyright {
 
 /* ------------------------- Body ------------------------- */
 
+/* タイプライター風入力 */
+/* luisvinicius167/ityped(https://github.com/luisvinicius167/ityped) */
+/* 要素の調整 */
+#ityped {
+  /* 配置 */
+  position: relative;                                /* 相対配置(元の配置を基準) */
+  top: 50px;                                         /* 上端からマージン */
+  left: 30px;                                        /* 左端からマージン */
+  z-index: 9;                                        /* 重なり順序:最大-1 */
+}
+/* カーソル */
+.ityped-cursor {
+  /* 配置 */
+  position: relative;                                /* 相対配置(元の配置を基準) */
+  top: 50px;                                         /* 上端からマージン */
+  left: 30px;                                        /* 左端からマージン */
+  z-index: 9;                                        /* 重なり順序:最大-1 */
+  /* アニメーション */
+  font-size: 2.2rem;
+  opacity: 1;
+  -webkit-animation: blink 0.3s infinite;
+  -moz-animation: blink 0.3s infinite;
+  animation: blink 0.3s infinite;
+  animation-direction: alternate;
+}
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
 #articleDetail {
 }
 

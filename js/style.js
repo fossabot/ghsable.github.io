@@ -1,3 +1,22 @@
+// --- タイプライター風入力
+ityped.init(document.querySelector("#ityped"), {
+  // required - for now, only accepting texts
+    strings: ['$ echo This page is suna-portforio.',
+              '$ bash -c $(curl -fsSL Dotfiles)',
+              '$ sudo pacmn -Syu',
+              '$ fuck',
+              '> Good Job :D'],
+    typeSpeed: 80,     //タイピング速度
+    backSpeed: 50,     //バックスペース速度
+    startDelay: 2000,  //アニメーション開始ディレイタイム
+    backDelay: 1000,   //バックスペース開始ディレイタイム
+    loop: true,        //ループ有無
+    showCursor: true,  //カーソル表示
+    cursorChar: "|",   //カーソルキャラクタ
+    // optional callback called once the last string has been typed
+    onFinished: function(){}
+})
+
 // --- フェードイン/アウト操作
 // 変数定義
 var btn_power = document.getElementById('input_power');

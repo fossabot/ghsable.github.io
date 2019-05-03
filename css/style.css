@@ -125,6 +125,7 @@ footer aside #copyright {
 /* luisvinicius167/ityped(https://github.com/luisvinicius167/ityped) */
 /* 要素の調整 */
 #ityped {
+  font-size: 22px;                                   /* フォントサイズ */
   /* 配置 */
   position: relative;                                /* 相対配置(元の配置を基準) */
   top: 50px;                                         /* 上端からマージン */

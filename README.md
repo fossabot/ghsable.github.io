@@ -4,12 +4,15 @@
 * [NECOSUNA天国](https://ghsable.github.io/)
 
 ## Thanks to ...
-**idea**
+**Concept**
 * [Dotfiles](https://ghsable.github.io/dotfiles/)
 
-**jQuery(no dependencies)**
+**Cascading Style Sheets**
+* [Normalize.css](https://necolas.github.io/normalize.css/)
+
+**JavaScript-jQuery(no dependencies)**
 * [iTyped.js](https://ityped.surge.sh)
 
-**jQuery(dependencies)**
+**JavaScript-jQuery(dependencies)**
 * [jQuery](https://jquery.com)
 * [jQuery Ripples](https://sirxemic.github.io/jquery.ripples/)

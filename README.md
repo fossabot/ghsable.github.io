@@ -10,6 +10,9 @@
 **Font**
 * [ZCOOL XiaoWei](https://fonts.google.com/specimen/ZCOOL+XiaoWei)
 
+**ICON**
+* [Font Awesome](https://fontawesome.com)
+
 **HyperText Markup Language**
 * [A Generic HTML5 Template](https://www.webfx.com/blog/web-design/html5-template/)
 

@@ -7,6 +7,9 @@
 **Concept**
 * [Dotfiles](https://ghsable.github.io/dotfiles/)
 
+**HyperText Markup Language**
+* [A Generic HTML5 Template](https://www.webfx.com/blog/web-design/html5-template/)
+
 **Cascading Style Sheets**
 * [Normalize.css](https://necolas.github.io/normalize.css/)
 

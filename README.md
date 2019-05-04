@@ -9,8 +9,6 @@
 
 **Font**
 * [ZCOOL XiaoWei](https://fonts.google.com/specimen/ZCOOL+XiaoWei)
-
-**ICON**
 * [Font Awesome](https://fontawesome.com)
 
 **HyperText Markup Language**

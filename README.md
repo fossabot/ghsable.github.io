@@ -7,6 +7,9 @@
 **Concept**
 * [Dotfiles](https://ghsable.github.io/dotfiles/)
 
+**Font**
+* [ZCOOL XiaoWei](https://fonts.google.com/specimen/ZCOOL+XiaoWei)
+
 **HyperText Markup Language**
 * [A Generic HTML5 Template](https://www.webfx.com/blog/web-design/html5-template/)
 

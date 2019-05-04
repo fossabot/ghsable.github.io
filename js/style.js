@@ -1,7 +1,7 @@
 // --- タイプライター風入力
 ityped.init(document.querySelector("#ityped"), {
   // required - for now, only accepting texts
-    strings: ['$ echo This page is suna-portforio.',
+    strings: ['$ echo This page is suna-Portforio.',
               '$ bash -c $(curl -fsSL Dotfiles)',
               '$ sudo pacmn -Syu',
               '$ fuck',

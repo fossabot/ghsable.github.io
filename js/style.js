@@ -1,4 +1,5 @@
 // --- タイプライター風入力
+// --- luisvinicius167/ityped(https://github.com/luisvinicius167/ityped)
 ityped.init(document.querySelector("#ityped"), {
   // required - for now, only accepting texts
     strings: ['$ echo This page is suna-Portforio.',
@@ -17,7 +18,7 @@ ityped.init(document.querySelector("#ityped"), {
     onFinished: function(){}
 })
 
-// --- フェードイン/アウト操作
+// --- フェードイン/アウト操作(CSS実装)
 // 変数定義
 var btn_power = document.getElementById('input_power');
 var box = document.getElementById('articleDetailBody');
@@ -38,7 +39,7 @@ btn_home.onclick = function () {
 }
 
 // --- 波紋エフェクト
-// sirxemic/jquery.ripples(https://github.com/sirxemic/jquery.ripples)
+// --- sirxemic/jquery.ripples(https://github.com/sirxemic/jquery.ripples)
 $('#articleDetail').ripples({      // 波紋をつける要素を指定
   resolution: 512,                 // 波紋が広がる速さ
   dropRadius: 20,                  // 波紋の大きさ

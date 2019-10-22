@@ -2,11 +2,9 @@
 // --- luisvinicius167/ityped(https://github.com/luisvinicius167/ityped)
 ityped.init(document.querySelector("#ityped"), {
   // required - for now, only accepting texts
-    strings: ['$ echo This page is suna-Portforio.',
-              '$ bash -c $(curl -fsSL Dotfiles)',
-              '$ sudo pacmn -Syu',
-              '$ fuck',
-              '> Good Job :D'],
+    strings: ['This page is suna-Portforio.',
+              'I am a Lifehacker.',
+              'Enjoy :D'],
     typeSpeed: 80,     //タイピング速度
     backSpeed: 50,     //バックスペース速度
     startDelay: 2000,  //アニメーション開始ディレイタイム

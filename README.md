@@ -1,7 +1,7 @@
 # suna's Portfolio
 
 ## GitHub Pages
-* [NECOSUNA天国](https://ghsable.github.io/)
+* [ghsable.github.io](https://ghsable.github.io/)
 
 ## Thanks to ...
 **Concept**

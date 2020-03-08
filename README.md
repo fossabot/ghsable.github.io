@@ -4,9 +4,6 @@
 * [ghsable.github.io](https://ghsable.github.io/)
 
 ## Thanks to ...
-**Concept**
-* [Dotfiles](https://ghsable.github.io/dotfiles/)
-
 **Font**
 * [ZCOOL XiaoWei](https://fonts.google.com/specimen/ZCOOL+XiaoWei)
 * [Font Awesome](https://fontawesome.com)

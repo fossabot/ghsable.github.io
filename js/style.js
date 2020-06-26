@@ -6,9 +6,9 @@ ityped.init(document.querySelector("#ityped"), {
               'my name is suna.',
               'I am a Lifehacker.',
               'I want to do something fun! XD'],
-    typeSpeed: 80,     //タイピング速度
-    backSpeed: 50,     //バックスペース速度
-    startDelay: 2000,  //アニメーション開始ディレイタイム
+    typeSpeed: 100,    //タイピング速度
+    backSpeed: 70,     //バックスペース速度
+    startDelay: 1500,  //アニメーション開始ディレイタイム
     backDelay: 1000,   //バックスペース開始ディレイタイム
     loop: true,        //ループ有無
     showCursor: true,  //カーソル表示
@@ -34,7 +34,7 @@ var btn_home = document.getElementById('label_home');
 // ボタンクリック時にアラート表示
 // 熱帯雨林の植林活動の支援をさせる
 btn_home.onclick = function () {
-  alert('We plant trees..:D');
+  alert('We plant trees.. :D');
 }
 
 // --- 波紋エフェクト

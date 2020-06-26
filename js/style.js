@@ -7,8 +7,8 @@ ityped.init(document.querySelector("#ityped"), {
               'I am a Lifehacker.',
               'I want to do something fun! XD'],
     typeSpeed: 100,    //タイピング速度
-    backSpeed: 70,     //バックスペース速度
-    startDelay: 1500,  //アニメーション開始ディレイタイム
+    backSpeed: 200,    //バックスペース速度
+    startDelay: 1000,  //アニメーション開始ディレイタイム
     backDelay: 1000,   //バックスペース開始ディレイタイム
     loop: true,        //ループ有無
     showCursor: true,  //カーソル表示

@@ -2,7 +2,8 @@
 // --- luisvinicius167/ityped(https://github.com/luisvinicius167/ityped)
 ityped.init(document.querySelector("#ityped"), {
   // required - for now, only accepting texts
-    strings: ['Welcome. My name is suna.',
+    strings: ['Welcome to my home.',
+              'my name is suna.',
               'I am a Lifehacker.',
               'I want to do something fun! XD'],
     typeSpeed: 80,     //タイピング速度

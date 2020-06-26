@@ -2,9 +2,9 @@
 // --- luisvinicius167/ityped(https://github.com/luisvinicius167/ityped)
 ityped.init(document.querySelector("#ityped"), {
   // required - for now, only accepting texts
-    strings: ['This page is suna-Portforio.',
+    strings: ['Welcome. My name is suna.',
               'I am a Lifehacker.',
-              'Enjoy :D'],
+              'I want to do something fun! XD'],
     typeSpeed: 80,     //タイピング速度
     backSpeed: 50,     //バックスペース速度
     startDelay: 2000,  //アニメーション開始ディレイタイム

@@ -3,11 +3,11 @@
 ityped.init(document.querySelector("#ityped"), {
   // required - for now, only accepting texts
     strings: ['Welcome to my home.',
-              'my name is suna.',
+              'My name is suna.',
               'I am a Lifehacker.',
               'I want to do something fun! XD'],
-    typeSpeed: 100,    //タイピング速度
-    backSpeed: 200,    //バックスペース速度
+    typeSpeed: 20,     //タイピング速度
+    backSpeed: 5,      //バックスペース速度
     startDelay: 1000,  //アニメーション開始ディレイタイム
     backDelay: 1000,   //バックスペース開始ディレイタイム
     loop: true,        //ループ有無

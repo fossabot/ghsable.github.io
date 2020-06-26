@@ -33,7 +33,7 @@ var btn_home = document.getElementById('label_home');
 // ボタンクリック時にアラート表示
 // 熱帯雨林の植林活動の支援をさせる
 btn_home.onclick = function () {
-  alert('隴西の李徴「うわぁああぁーーー!!」');
+  alert('We plant trees..:D');
 }
 
 // --- 波紋エフェクト

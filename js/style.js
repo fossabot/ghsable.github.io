@@ -40,7 +40,7 @@ btn_home.onclick = function () {
 // --- 波紋エフェクト
 // --- sirxemic/jquery.ripples(https://github.com/sirxemic/jquery.ripples)
 $('#articleDetail').ripples({      // 波紋をつける要素を指定
-  resolution: 512,                 // 波紋が広がる速さ
-  dropRadius: 20,                  // 波紋の大きさ
-  perturbance: 0.04                // 波紋の揺れの量
+//  resolution: 512,                 // 波紋が広がる速さ
+//  dropRadius: 20,                  // 波紋の大きさ
+//  perturbance: 0.04                // 波紋の揺れの量
 });

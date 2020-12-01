@@ -205,7 +205,7 @@ to {
 
 #articleDetail #articleDetailBody .articleDetailBodyList h1 {
   /* 'normalize.css'との調停 */
-  font-size: 30px;                                   /* フォントサイズ */
+  font-size: 33px;                                   /* フォントサイズ */
   margin: 0;                                         /* マージン無効 */
   margin-bottom: 20px;                               /* 下マージン */ 
   padding: 0;                                        /* パディング無効 */

@@ -14,8 +14,8 @@ ityped.init(document.querySelector("#ityped"), {
     showCursor: true,  //カーソル表示
     cursorChar: "|",   //カーソルキャラクタ
     // optional callback called once the last string has been typed
-    onFinished: function(){}
-})
+    onFinished: function(){},
+}
 
 // --- フェードイン/アウト操作(CSS実装)
 // 変数定義
@@ -24,7 +24,7 @@ var box = document.getElementById('articleDetailBody');
 
 // ボタンクリック時に.is-showクラス付与
 btn_power.onclick = function () {
-  box.classList.toggle('is-show')
+  box.classList.toggle('is-show');
 }
 
 // --- メッセージ表示

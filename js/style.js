@@ -19,8 +19,8 @@ ityped.init(document.querySelector("#ityped"), {
 
 // --- フェードイン/アウト操作(CSS実装)
 // 変数定義
-var btn_power = document.getElementById('input_power');
-var box = document.getElementById('articleDetailBody');
+const btn_power = document.getElementById('input_power');
+const box = document.getElementById('articleDetailBody');
 
 // ボタンクリック時に.is-showクラス付与
 btn_power.onclick = function () {
@@ -29,7 +29,7 @@ btn_power.onclick = function () {
 
 // --- メッセージ表示
 // 変数定義
-var btn_home = document.getElementById('label_home');
+const btn_home = document.getElementById('label_home');
 
 // ボタンクリック時にアラート表示
 // 熱帯雨林の植林活動の支援をさせる

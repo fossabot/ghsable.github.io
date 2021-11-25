@@ -80,8 +80,7 @@ header nav ul li label {
 }
 /* ラベルホバー時に傾きアニメーション */
 header nav ul li label:hover {
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
+  transform: rotate(-0.9turn);
 }
 
 header nav ul:after {

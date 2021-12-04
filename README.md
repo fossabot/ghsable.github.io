@@ -1,4 +1,6 @@
 # ghsable.github.io
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fghsable%2Fghsable.github.io.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fghsable%2Fghsable.github.io?ref=badge_shield)
+
 [ghsable.github.io](https://ghsable.github.io/) is my portfolio.
 
 ## Thanks
@@ -15,3 +17,7 @@ I used the following tools :
 > * **JavaScript-jQuery**
 >   * [jQuery](https://jquery.com)
 >   * [jQuery Ripples](https://sirxemic.github.io/jquery.ripples/)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fghsable%2Fghsable.github.io.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fghsable%2Fghsable.github.io?ref=badge_large)
